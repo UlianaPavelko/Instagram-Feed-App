@@ -1,0 +1,66 @@
+<div class="top-bar">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                <form class="clearfix" role="form">
+                    <input type="text" class="form-control" placeholder="Tag" ng-model="search">
+                    <button class="btn btn-default btn-custom" ng-click="searchTag(search); limit = 8">Show</button> 
+                </form>
+            </div>
+            <div class="col-lg-8 col-md-8 col-sm-6 col-xs-12">
+                <ul class="tag-list">
+                    <li>
+                        <a href="" ng-click="searchTag('Whichit'); limit = 8">Whichit</a>
+                    </li>
+                    <li>
+                        <a href="" ng-click="searchTag('Christmas'); limit = 8">Christmas</a>
+                    </li>
+                    <li>
+                        <a href="" ng-click="searchTag('shopping'); limit = 8">shopping</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row" ng-init="limit = 8">
+        <div ng-repeat="item in feed | limitTo : limit">
+            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                <div class="img-holder text-center">
+                    <a ng-click="open(item)">
+                        <img ng-src="{{item.images.thumbnail.url}}" class="img-thumbnail img-responsive">
+                    </a> 
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="bottom-bar">
+    <div class="row">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4 text-center">
+            <button class="btn btn-default btn-block btn-custom" ng-click="limit = limit + 4">See More</button>
+        </div>
+        <div class="col-sm-4"></div>
+    </div>
+</div>
+
+<script type="text/ng-template" id="myModalContent.html">
+    <div class="modal-header">
+        <a href="" ng-click="searchUserModal(item.caption.from.id)">{{item.caption.from.full_name}}</a>
+    </div>
+    <div class="modal-body">
+        <div class="img-holder text-center">
+            <img ng-src="{{item.images.standard_resolution.url}}" class="img-responsive">
+        </div>
+        <div class="modal-footer">
+            <ul class="tag-list" ng-repeat="tag in item.tags| limitTo : 5">
+                <li>
+                    <a href="" ng-click="searchTagModal(tag)">{{tag}}</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</script>
+
