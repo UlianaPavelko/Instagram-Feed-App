@@ -1,0 +1,44 @@
+body {
+    color: #999; }
+body ul {
+    padding: 0;
+    margin: 0; }
+body ul li {
+    list-style: none; }
+
+.top-bar {
+    padding: 10px 0;
+    background: #f2f2f2;
+    margin-bottom: 40px; }
+
+.tag-list li {
+    float: left;
+    margin: 0 20px 0 0;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 30px; }
+.tag-list li a {
+    color: #25aae1; }
+
+.img-holder {
+    margin: 20px 0; }
+
+form .form-control {
+    float: left;
+    width: 80%;
+    font-weight: 300; }
+form .btn-custom {
+    float: left;
+    width: 18%;
+    margin-left: 2%; }
+
+.btn-custom {
+    color: #fff;
+    font-weight: 300;
+    background: #25aae1;
+    border-color: #1a8bb9; }
+
+.bottom-bar {
+    margin-top: 40px; }
+
+/*# sourceMappingURL=mystyle.css.map */

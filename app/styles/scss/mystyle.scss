@@ -1,0 +1,55 @@
+$fontColor: #999;
+$backgroundColor: #fff;
+$customColor: #25aae1;
+body{
+    color: $fontColor;
+    ul{
+        padding: 0;
+        margin: 0;
+        li{
+            list-style: none;   
+        }
+    }
+}
+.top-bar{
+    padding: 10px 0;
+    background: darken( $backgroundColor, 5%);
+    margin-bottom: 40px;
+
+}
+.tag-list{
+    li{
+        float: left;
+        margin: 0 20px 0 0;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 30px;
+        a{
+            color: $customColor;
+        }
+    }
+}
+.img-holder{
+    margin: 20px 0;  
+}
+form{
+    .form-control{
+        float: left;
+        width: 80%;
+        font-weight: 300;
+    } 
+    .btn-custom{
+        float: left;
+        width: 18%;
+        margin-left: 2%;
+    }
+}
+.btn-custom{
+    color: $backgroundColor;
+    font-weight: 300;
+    background: $customColor;
+    border-color: darken($customColor, 10%);
+}
+.bottom-bar{
+    margin-top: 40px;
+}
