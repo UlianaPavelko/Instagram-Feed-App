@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html ng-app="whichitApp">
+    <head>
+        <title>Instagram Feed App</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css"> 
+        <link rel="stylesheet" href="app/styles/css/mystyle.css">
+    </head>
+    <body>
+        <header></header>
+        <main ng-view=""></main>
+        <footer></footer>
+        <script src="bower_components/angular/angular.min.js"></script>
+        <script src="bower_components/angular-route/angular-route.js"></script>
+        <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+        <script src="app/scripts/app.js"></script>
+        <script src='app/scripts/services/instagramService.js'></script>
+        <script src="app/scripts/controllers/whichitCtrl.js"></script>
+    </body>
+</html>
